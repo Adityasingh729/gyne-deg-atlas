@@ -1,0 +1,14 @@
+dataset_id	condition	tissue	technique	n_case	n_control	n_DEG_padj05	pca_separation	schema_valid	outliers_removed	status	owner	date	notes
+GSE34526	PCOS	Granulosa	Microarray	7	3	1	Yes	Yes	No	pass	Aman	2026-06-22	""
+GSE168404	PCOS	Granulosa cells	RNA-seq	5	5	71	No	Yes	No	pass	Aman	2026-06-22	""
+GSE216609	PCOS	Granulosa cells	RNA-seq	3	4	283	Yes	Yes	No	pass	Aman	2026-06-22	""
+GSE328499	PCOS	Granulosa cells	RNA-seq	3	3	16	Yes	Yes	No	pass	Aman	2026-06-22	""
+GSE294074	PCOS	Granulosa cells	RNA-seq	3	3	35	No	Yes	No	pass	Aman	2026-06-22	""
+GSE191022	PCOS	Granulosa cells	RNA-seq	3	3	394	Partial	Yes	No	pass	Aman	2026-06-22	""
+GSE193123	PCOS	Granulosa cells	RNA-seq	3	3	107	No	Yes	No	pass	Aman	2026-06-22	""
+GSE98595	PCOS	Granulosa cells	Microarray	10	6	404	No	Yes	No	pass	Aman	2026-06-22	""
+GSE80432	PCOS	Granulosa cells	Microarray	8	8	0	No	Yes	No	pass	Aman	2026-06-22	0 significant DEGs.
+GSE106724	PCOS	Granulosa cells	Microarray	4	4	0	No	Yes	No	pass	Aman	2026-06-22	0 significant DEGs.
+GSE137684	PCOS	Granulosa cells	Microarray	4	4	0	No	Yes	No	pass	Aman	2026-06-22	0 significant DEGs.
+GSE102293	PCOS	Granulosa cells	Microarray	2	4	0	No	Yes	No	pass	Aman	2026-06-22	0 significant DEGs.
+GSE114419	PCOS	Granulosa cells	Microarray	3	3	0	No	Yes	No	pass	Aman	2026-06-22	0 significant DEGs.

@@ -8,7 +8,5 @@ rule enrich:
     resources: mem_mb=3000
     log: "results/logs/enrich_{stratum}.log"
     shell:
-        r"""
-        Rscript workflow/scripts/enrich_hubs.R --meta {input} \
-            --out_enrich {output.enr} --out_hubs {output.hubs} > {log} 2>&1
-        """
+        "Rscript workflow/scripts/enrich_hubs.R --meta {input} --out_enrich {output.enr} --out_hubs {output.hubs} > {log} 2>&1"
+

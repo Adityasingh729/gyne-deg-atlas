@@ -6,8 +6,5 @@ rule ml_panel:
     resources: mem_mb=4000
     log: "results/logs/ml_panel.log"
     shell:
-        r"""
-        python workflow/scripts/ml_panel.py --meta_dir results/meta \
-            --expr_dir data/expr --samplesheet {config[samplesheet]} \
-            --cv leave-one-dataset-out --out {output} > {log} 2>&1
-        """
+        "python workflow/scripts/ml_panel.py --meta_dir results/meta --expr_dir data/expr --samplesheet {config[samplesheet]} --cv leave-one-dataset-out --out {output} > {log} 2>&1"
+

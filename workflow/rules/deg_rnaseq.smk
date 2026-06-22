@@ -1,7 +1,11 @@
 # DESeq2 on pre-computed counts (RNA-seq strata).
+RNASEQ_DATASETS = [d for d in DATASETS if samples.loc[d, "technique"] == "RNA-seq"]
+
 rule deg_rnaseq:
     input: "data/expr/{dataset}.expr.rds"
     output: "results/deg/{dataset}.deg.tsv"
+    wildcard_constraints:
+        dataset="|".join(RNASEQ_DATASETS) if RNASEQ_DATASETS else "NONE"
     params:
         group=lambda wc: samples.loc[wc.dataset, "group_column"],
         case=lambda wc: samples.loc[wc.dataset, "case_label"],
@@ -11,10 +15,6 @@ rule deg_rnaseq:
     resources: mem_mb=4000
     log: "results/logs/deg_rnaseq_{dataset}.log"
     shell:
-        r"""
-        Rscript workflow/scripts/deg_deseq2.R --expr {input} \
-            --group {params.group} --case "{params.case}" --control "{params.ctrl}" \
-            --padj {params.padj} --lfc {params.lfc} --out {output} > {log} 2>&1
-        """
-# NOTE: snakemake picks deg_rnaseq OR deg_microarray per dataset via the technique
-#       column; wire the selection with a small input function if you prefer one rule.
+        "Rscript workflow/scripts/deg_deseq2.R --expr {input} --group \"{params.group}\" --case \"{params.case}\" --control \"{params.ctrl}\" --padj {params.padj} --lfc {params.lfc} --out {output} > {log} 2>&1"
+
+

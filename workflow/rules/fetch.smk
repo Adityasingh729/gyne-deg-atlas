@@ -13,10 +13,5 @@ rule fetch_counts:
     resources: mem_mb=3000
     log: "results/logs/fetch_{dataset}.log"
     shell:
-        r"""
-        Rscript workflow/scripts/fetch_expr.R \
-            --dataset {wildcards.dataset} \
-            --technique "{params.technique}" \
-            --source "{params.source}" \
-            --out {output} > {log} 2>&1
-        """
+        "Rscript workflow/scripts/fetch_expr.R --dataset {wildcards.dataset} --technique \"{params.technique}\" --source \"{params.source}\" --out {output} > {log} 2>&1"
+
