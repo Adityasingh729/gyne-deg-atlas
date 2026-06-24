@@ -600,7 +600,13 @@ if (!is.null(rownames(counts))) {
   counts_dt <- cbind(gene = paste0("Gene", 1:nrow(counts)), counts_dt)
 }
 fwrite(counts_dt, counts_tsv, sep="\t")
-fwrite(as.data.table(meta, keep.rownames="sample"), meta_tsv, sep="\t")
+meta_df <- as.data.frame(meta)
+meta_dt <- as.data.table(meta_df)
+meta_dt$sample <- rownames(meta_df)
+if ("sample" %in% names(meta_dt)) {
+  setcolorder(meta_dt, c("sample", setdiff(names(meta_dt), "sample")))
+}
+fwrite(meta_dt, meta_tsv, sep="\t")
 
 message("Successfully saved RDS to: ", out_file)
 message("Successfully saved sidecar counts to: ", counts_tsv)

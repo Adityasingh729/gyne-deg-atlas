@@ -1,9 +1,9 @@
-# Tissue / cell-type rules (read before adding any dataset)
+# Tissue and Cell-Type Stratification Guidelines
 
 These rules prevent the single most common failure in expression meta-analysis:
 combining samples that are not biologically comparable.
 
-## Hard rules
+## Core Requirements
 1. **One analysis per (condition x tissue) stratum.** Never merge tissues.
 2. **Assign exactly ONE primary tissue per dataset** in the sample sheet (`tissue_primary`).
    The auto tissue tags overlap (a granulosa dataset may also say "ovarian"); pick the most specific.

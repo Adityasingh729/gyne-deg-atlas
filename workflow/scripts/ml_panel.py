@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Cross-DATASET-validated gene panel on meta-DEGs.
-Leave-one-dataset-out CV (NOT leave-one-sample-out) is what makes this honest.
-8 GB-safe: restrict features to the meta-signature genes before fitting.
-Loads tidy sidecar TSV expression files created during fetch_expr."""
+"""Cross-dataset-validated gene panel selection using meta-analysis DEGs.
+Implements Leave-One-Dataset-Out (LODO) cross-validation to assess panel robustness.
+Restricts features to the meta-signature genes to optimize resource utilization.
+Loads expression TSV files created during fetch_expr."""
 
 import argparse
 import glob

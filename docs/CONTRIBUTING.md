@@ -1,4 +1,4 @@
-# Contributing (subordinate workflow)
+# Contributing Guidelines
 
 1. Pick your assigned (condition x tissue) stratum from `config/strata.csv`.
 2. Fill your datasets into `config/samplesheet.csv` (copy from the template). Set:

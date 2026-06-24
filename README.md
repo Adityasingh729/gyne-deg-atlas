@@ -12,7 +12,7 @@ adenomyosis**, built from uniformly pre-quantified public datasets. Designed to 
 5. A cross-dataset-validated ML gene panel.
 6. Feeds robust hub targets into network pharmacology / docking (separate repos).
 
-## Golden rules (do not break)
+## Core Methodology & Guidelines
 - **Never pool across tissues.** One analysis per (condition x tissue) stratum.
 - **One primary tissue per dataset.** Auto tissue tags overlap; fix in the sample sheet.
 - **RNA-seq and microarray are analysed separately**, then combined at the results level.
