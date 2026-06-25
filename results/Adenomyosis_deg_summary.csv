@@ -1,0 +1,10 @@
+dataset_id,condition,tissue,technique,samples_estimate,n_case_analyzed,n_control_analyzed,n_DEG_padj05,status,notes
+GSE244236,Adenomyosis,Eutopic endometrium,RNA-seq,57,,,,unmapped,NA
+GSE171653,Adenomyosis,Endometrium,RNA-seq,48,,,,unmapped,NA
+GSE193928,Adenomyosis,Endometrium,RNA-seq,37,,,,unmapped,MIXED GROUPS: adenomyosis+endometriosis+DIE - split carefully
+GSE190580,Adenomyosis,Eutopic endometrium,RNA-seq,22,,,,unmapped,NA
+GSE185392,Adenomyosis,Endometrium,RNA-seq,20,,,,unmapped,NA
+GSE262302,Adenomyosis,UNCLEAR - check,RNA-seq,16,,,,unmapped,NA
+GSE68870,Adenomyosis,Eutopic endometrium,Microarray,8,,,,unmapped,NA
+GSE78851,Adenomyosis,Eutopic endometrium,Microarray,8,,,,unmapped,NA
+GSE74373,Adenomyosis,Eutopic endometrium,Microarray,6,,,,unmapped,NA

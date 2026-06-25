@@ -1,56 +1,56 @@
 dataset_id,condition,tissue,technique,n_case,n_control,n_DEG_padj05,status,notes
-GSE34526,PCOS,Granulosa,Microarray,7,3,1,pass,
-GSE199225,PCOS,Skeletal muscle,RNA-seq,24,25,995,pass,
-GSE6364,Endometriosis,Endometrium,Microarray,21,16,0,pass,
-GSE254251,Endometriosis,Endometrial stromal cells,RNA-seq,6,6,0,pass,
-GSE40007,Endometriosis,Endometrial stromal cells,Microarray,3,3,0,pass,
-GSE31683,Endometriosis,Endometrial stromal cells,Microarray,2,2,4367,pass,
-GSE47360,Endometriosis,Endometrial stromal cells,Microarray,3,0,0,pass,
-GSE139954,Endometriosis,Endometrial stromal cells,Microarray,4,4,0,pass,
-GSE56854,Endometriosis,Endometrial stromal cells,Microarray,4,4,1131,pass,
-GSE75425,Endometriosis,Endometrial stromal cells,Microarray,4,4,6,pass,
-GSE107469,Endometriosis,Endometrial stromal cells,Microarray,3,3,0,pass,
-GSE135485,Endometriosis,Endometrium,RNA-seq,54,4,103,pass,
-GSE148473,Endometriosis,Endometrium,RNA-seq,3,3,4467,pass,
-GSE226575,Endometriosis,Endometrium,RNA-seq,5,4,217,pass,
-GSE153739,Endometriosis,Endometrium,RNA-seq,4,3,0,pass,
-GSE152661,Endometriosis,Endometrium,RNA-seq,3,3,10570,pass,
-GSE145701,Endometriosis,Endometrium,Microarray,16,16,484,pass,
-GSE120103,Endometriosis,Endometrium,Microarray,9,9,2894,pass,
-GSE7305,Endometriosis,Endometrium,Microarray,10,10,8305,pass,
-GSE248593,Endometriosis,Endometrium,Microarray,6,6,1559,pass,
-GSE101176,Endometriosis,Endometrium,Microarray,3,0,0,pass,
-GSE241134,Endometriosis,Endometrium,Microarray,5,4,0,pass,
-GSE202571,Endometriosis,Eutopic endometrium,RNA-seq,6,12,3,pass,
-GSE130435,Endometriosis,Eutopic endometrium,RNA-seq,11,2,1482,pass,
-GSE315857,Endometriosis,Eutopic endometrium,RNA-seq,4,4,65,pass,
-GSE303635,Endometriosis,Stromal cells,RNA-seq,5,5,4392,pass,
-GSE284362,Endometriosis,Stromal cells,RNA-seq,5,5,1,pass,
-GSE87809,Endometriosis,Stromal cells,RNA-seq,4,5,460,pass,
-GSE309027,Endometriosis,Stromal cells,RNA-seq,4,4,3191,pass,
-GSE31515,Endometriosis,Stromal cells,Microarray,10,2,233,pass,
-GSE136412,Endometriosis,Stromal cells,Microarray,8,8,132,pass,
-GSE75423,Endometriosis,Stromal cells,Microarray,4,4,799,pass,
-GSE155489,PCOS,Cumulus cells,RNA-seq,4,4,2139,pass,
-GSE10946,PCOS,Cumulus cells,Microarray,23,0,0,pass,
-GSE168404,PCOS,Granulosa cells,RNA-seq,5,5,71,pass,
-GSE216609,PCOS,Granulosa cells,RNA-seq,3,4,283,pass,
-GSE328499,PCOS,Granulosa cells,RNA-seq,3,3,16,pass,
-GSE294074,PCOS,Granulosa cells,RNA-seq,3,3,35,pass,
-GSE191022,PCOS,Granulosa cells,RNA-seq,3,3,394,pass,
-GSE193123,PCOS,Granulosa cells,RNA-seq,3,3,107,pass,
-GSE98595,PCOS,Granulosa cells,Microarray,10,6,404,pass,
-GSE80432,PCOS,Granulosa cells,Microarray,8,8,0,pass,
-GSE106724,PCOS,Granulosa cells,Microarray,4,4,0,pass,
-GSE137684,PCOS,Granulosa cells,Microarray,4,4,0,pass,
-GSE102293,PCOS,Granulosa cells,Microarray,2,4,0,pass,
-GSE114419,PCOS,Granulosa cells,Microarray,3,3,0,pass,
-GSE8157,PCOS,Skeletal muscle,Microarray,10,13,1723,pass,
-GSE6798,PCOS,Skeletal muscle,Microarray,16,13,21,pass,
-GSE188740,PCOS,Ovary/ovarian,RNA-seq,13,11,0,pass,
-GSE267287,PCOS,Ovary/ovarian,RNA-seq,7,7,972,pass,
-GSE138518,PCOS,Ovary/ovarian,RNA-seq,3,3,177,pass,
-GSE87435,PCOS,Ovary/ovarian,Microarray,6,0,0,pass,
-GSE54250,PCOS,Whole blood,Microarray,4,4,1,pass,
-GSE54248,PCOS,Whole blood,Microarray,4,4,1,pass,
-GSE5090,PCOS,Adipose,Microarray,9,8,0,pass,
+GSE34526,PCOS,Granulosa,Microarray,7,3,0,pass,""
+GSE199225,PCOS,Skeletal muscle,RNA-seq,24,25,995,pass,""
+GSE6364,Endometriosis,Endometrium,Microarray,21,16,0,pass,""
+GSE254251,Endometriosis,Endometrial stromal cells,RNA-seq,6,6,0,pass,""
+GSE40007,Endometriosis,Endometrial stromal cells,Microarray,3,3,0,pass,""
+GSE31683,Endometriosis,Endometrial stromal cells,Microarray,2,2,4367,pass,""
+GSE47360,Endometriosis,Endometrial stromal cells,Microarray,6,3,0,pass,""
+GSE139954,Endometriosis,Endometrial stromal cells,Microarray,4,4,0,pass,""
+GSE56854,Endometriosis,Endometrial stromal cells,Microarray,4,4,1131,pass,""
+GSE75425,Endometriosis,Endometrial stromal cells,Microarray,4,4,6,pass,""
+GSE107469,Endometriosis,Endometrial stromal cells,Microarray,3,3,0,pass,""
+GSE135485,Endometriosis,Endometrium,RNA-seq,54,4,103,pass,""
+GSE148473,Endometriosis,Endometrium,RNA-seq,3,3,4467,pass,""
+GSE226575,Endometriosis,Endometrium,RNA-seq,5,4,217,pass,""
+GSE153739,Endometriosis,Endometrium,RNA-seq,4,3,0,pass,""
+GSE152661,Endometriosis,Endometrium,RNA-seq,3,3,10570,pass,""
+GSE145701,Endometriosis,Endometrium,Microarray,16,16,484,pass,""
+GSE120103,Endometriosis,Endometrium,Microarray,9,9,2894,pass,""
+GSE7305,Endometriosis,Endometrium,Microarray,10,10,8305,pass,""
+GSE248593,Endometriosis,Endometrium,Microarray,6,6,1559,pass,""
+GSE101176,Endometriosis,Endometrium,Microarray,3,3,2,pass,""
+GSE241134,Endometriosis,Endometrium,Microarray,5,4,0,pass,""
+GSE202571,Endometriosis,Eutopic endometrium,RNA-seq,6,12,3,pass,""
+GSE130435,Endometriosis,Eutopic endometrium,RNA-seq,11,2,1482,pass,""
+GSE315857,Endometriosis,Eutopic endometrium,RNA-seq,4,4,65,pass,""
+GSE303635,Endometriosis,Stromal cells,RNA-seq,5,5,4392,pass,""
+GSE284362,Endometriosis,Stromal cells,RNA-seq,5,5,1,pass,""
+GSE87809,Endometriosis,Stromal cells,RNA-seq,4,5,460,pass,""
+GSE309027,Endometriosis,Stromal cells,RNA-seq,4,4,3191,pass,""
+GSE31515,Endometriosis,Stromal cells,Microarray,10,2,233,pass,""
+GSE136412,Endometriosis,Stromal cells,Microarray,8,8,132,pass,""
+GSE75423,Endometriosis,Stromal cells,Microarray,4,4,799,pass,""
+GSE155489,PCOS,Cumulus cells,RNA-seq,4,4,2139,pass,""
+GSE10946,PCOS,Cumulus cells,Microarray,12,11,0,pass,""
+GSE168404,PCOS,Granulosa,RNA-seq,5,5,150,pass,""
+GSE216609,PCOS,Granulosa,RNA-seq,3,4,6,pass,""
+GSE328499,PCOS,Granulosa,RNA-seq,3,3,16,pass,""
+GSE294074,PCOS,Granulosa,RNA-seq,3,3,56,pass,""
+GSE191022,PCOS,Granulosa,RNA-seq,3,3,410,pass,""
+GSE193123,PCOS,Granulosa,RNA-seq,3,3,113,pass,""
+GSE98595,PCOS,Granulosa,Microarray,10,6,404,pass,""
+GSE80432,PCOS,Granulosa,Microarray,8,8,0,pass,""
+GSE106724,PCOS,Granulosa,Microarray,4,4,1088,pass,""
+GSE137684,PCOS,Granulosa,Microarray,4,4,0,pass,""
+GSE102293,PCOS,Granulosa,Microarray,2,4,0,pass,""
+GSE114419,PCOS,Granulosa,Microarray,3,3,0,pass,""
+GSE8157,PCOS,Skeletal muscle,Microarray,10,13,1723,pass,""
+GSE6798,PCOS,Skeletal muscle,Microarray,16,13,21,pass,""
+GSE188740,PCOS,Ovary/ovarian,RNA-seq,13,11,0,pass,""
+GSE267287,PCOS,Ovary/ovarian,RNA-seq,7,7,972,pass,""
+GSE138518,PCOS,Ovary/ovarian,RNA-seq,3,3,177,pass,""
+GSE87435,PCOS,Ovary/ovarian,Microarray,6,12,1923,pass,""
+GSE54250,PCOS,Whole blood,Microarray,4,4,1,pass,""
+GSE54248,PCOS,Whole blood,Microarray,4,4,1,pass,""
+GSE5090,PCOS,Adipose,Microarray,9,8,0,pass,""

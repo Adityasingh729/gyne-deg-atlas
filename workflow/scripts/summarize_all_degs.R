@@ -71,6 +71,7 @@ for (i in 1:nrow(samples)) {
 
 dt_results <- rbindlist(results)
 fwrite(dt_results, "results/all_datasets_deg_summary.tsv", sep="\t")
+fwrite(dt_results, "results/all_datasets_deg_summary.csv", sep=",")
 
 # Output markdown table
 cat("\n# Master DEG Analysis Summary (All Datasets)\n\n")
