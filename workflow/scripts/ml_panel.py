@@ -13,7 +13,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import LeaveOneGroupOut, StratifiedKFold
 from sklearn.metrics import roc_auc_score
 from sklearn.preprocessing import StandardScaler
-import shap
+# shap is disabled globally on Windows to prevent DLL binary conflict crashes with numpy 2.x
+# import shap
 
 def main():
     ap = argparse.ArgumentParser()
@@ -188,19 +189,9 @@ def main():
     
     coefs = model_full.coef_[0]
     
-    # Compute SHAP values
-    print("Calculating SHAP values...")
-    try:
-        explainer = shap.LinearExplainer(model_full, X_scaled_df)
-        shap_values = explainer.shap_values(X_scaled_df)
-        if isinstance(shap_values, list):
-            # SHAP returns a list of arrays for binary classification in older versions
-            shap_values = shap_values[1]
-        # Take absolute mean SHAP importance per gene
-        mean_shap = np.abs(shap_values).mean(axis=0)
-    except Exception as e:
-        print(f"SHAP calculation failed: {e}. Falling back to absolute coefficients.")
-        mean_shap = np.abs(coefs)
+    # Compute feature importance (fallback directly to absolute coefficients to prevent SHAP DLL crash)
+    print("SHAP calculation skipped. Using absolute coefficients for feature importance.")
+    mean_shap = np.abs(coefs)
         
     # Compile report
     report = pd.DataFrame({

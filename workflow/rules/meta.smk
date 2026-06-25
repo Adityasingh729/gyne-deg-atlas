@@ -9,7 +9,7 @@ def get_stratum_datasets(wildcards):
         s_id = f"{cond}__{tissue}".replace(" ", "_").replace("/", "-")
         if s_id == wildcards.stratum:
             datasets_in_stratum.append(ds)
-    return [f"results/deg/{ds}.deg.tsv" for ds in datasets_in_stratum]
+    return [f"results/deg/{ds}.deg.symbols.tsv" for ds in datasets_in_stratum]
 
 rule meta:
     input: get_stratum_datasets
