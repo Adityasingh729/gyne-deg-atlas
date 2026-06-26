@@ -1,0 +1,19 @@
+Fetching dataset: GSE114419 (Microarray) from source: GEO_matrix
+Found 1 file(s)
+GSE114419_series_matrix.txt.gz
+Using locally cached version: data/expr/GSE114419_series_matrix.txt.gz
+Using locally cached version of GPL17586 found here:
+data/expr/GPL17586.soft.gz 
+Warning message:
+Could not find gene symbol column in fData. Keeping probe IDs as rownames. 
+Sample group breakdown:
+
+<NA> 
+   6 
+Successfully saved RDS to: data/expr/GSE114419.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE114419.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE114419.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6808291 363.7   11644411 621.9  8220814 439.1
+Vcells 35984377 274.6   74629138 569.4 68882344 525.6
+ 

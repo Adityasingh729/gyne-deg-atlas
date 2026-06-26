@@ -1,0 +1,30 @@
+Running enrichment and hub analysis for file: results/meta/Adenomyosis__Endometrium.meta.tsv
+Number of genes selected for enrichment & PPI network: 1196
+'select()' returned 1:1 mapping between keys and columns
+Warning message:
+In bitr(sig_genes, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db") :
+  0.17% of input gene IDs are fail to map...
+Reading KEGG annotation online: "https://rest.kegg.jp/link/hsa/pathway"...
+Warning messages:
+1: In file(con, "r") :
+  URL 'https://rest.kegg.jp/link/hsa/pathway': Timeout of 60 seconds was reached
+2: In value[[3L]](cond) :
+  enrichKEGG failed: cannot open the connection to 'https://rest.kegg.jp/link/hsa/pathway'
+Saved enrichment results to: results/enrich/Adenomyosis__Endometrium.enrich.tsv
+trying URL 'https://stringdb-downloads.org/download/protein.aliases.v11.5/9606.protein.aliases.v11.5.txt.gz'
+Content type 'application/octet-stream' length 21726816 bytes (20.7 MB)
+=====
+downloaded 2.4 MB
+
+Warning messages:
+1: In download.file(urlStr, temp) :
+  downloaded length 2539249 != reported length 21726816
+2: In download.file(urlStr, temp) :
+  URL 'https://stringdb-downloads.org/download/protein.aliases.v11.5/9606.protein.aliases.v11.5.txt.gz': Timeout of 60 seconds was reached
+3: In value[[3L]](cond) :
+  STRINGdb analysis failed or skipped (e.g. offline/network issue): download from 'https://stringdb-downloads.org/download/protein.aliases.v11.5/9606.protein.aliases.v11.5.txt.gz' failed
+Saved PPI hubs to: results/enrich/Adenomyosis__Endometrium.hubs.tsv
+           used  (Mb) gc trigger  (Mb) max used   (Mb)
+Ncells  6053454 323.3   16755859 894.9 26181028 1398.3
+Vcells 18357081 140.1   54828080 418.4 54828023  418.4
+ 

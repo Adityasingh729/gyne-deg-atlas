@@ -1,0 +1,6 @@
+Warning message:
+Zero sample variances detected, have been offset away from zero 
+          used (Mb) gc trigger (Mb) max used (Mb)
+Ncells  527419 28.2    1155245 61.7   703331 37.6
+Vcells 2084513 16.0    8388608 64.0  6714604 51.3
+ 

@@ -1,0 +1,8 @@
+Running meta-analysis for stratum: PCOS__Granulosa using method: RRA
+Datasets in stratum (N = 5): GSE34526, GSE102293, GSE106724, GSE114419, GSE137684
+Successfully loaded 5 DEG datasets.
+Robust Rank Aggregation (RRA) completed successfully. Wrote 268163 genes.
+           used (Mb) gc trigger  (Mb) max used (Mb)
+Ncells   748925 40.0    1657892  88.6  1657892 88.6
+Vcells 10381569 79.3   17824054 136.0 12245457 93.5
+ 

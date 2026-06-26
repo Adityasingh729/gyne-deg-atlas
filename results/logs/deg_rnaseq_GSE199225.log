@@ -1,0 +1,16 @@
+converting counts to integer mode
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+-- replacing outliers and refitting for 44 genes
+-- DESeq argument 'minReplicatesForReplace' = 7 
+-- original counts are preserved in counts(dds)
+estimating dispersions
+fitting model and testing
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6682714 356.9   12279865 655.9 12279865 655.9
+Vcells 18481003 141.0   37545352 286.5 37545352 286.5
+ 

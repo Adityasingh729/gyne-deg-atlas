@@ -34,3 +34,4 @@ out <- data.table(gene=rownames(tt), log2FC=tt$logFC, p=tt$P.Value,
                   padj=tt$adj.P.Val, n=ncol(E))
 fwrite(out, opt$out, sep="\t")
 gc()
+ 

@@ -17,3 +17,4 @@ rule deg_microarray:
         "Rscript workflow/scripts/deg_limma.R --expr {input} --group \"{params.group}\" --case \"{params.case}\" --control \"{params.ctrl}\" --out {output} > {log} 2>&1"
 
 
+ 

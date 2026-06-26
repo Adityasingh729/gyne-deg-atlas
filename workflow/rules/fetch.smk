@@ -15,3 +15,4 @@ rule fetch_counts:
     shell:
         "Rscript workflow/scripts/fetch_expr.R --dataset {wildcards.dataset} --technique \"{params.technique}\" --source \"{params.source}\" --out {output} > {log} 2>&1"
 
+ 

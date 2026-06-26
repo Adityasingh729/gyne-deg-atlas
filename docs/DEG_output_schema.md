@@ -16,3 +16,4 @@ Rules:
 - Direction is always **case minus control** (e.g., PCOS minus Control).
 - File name: `results/deg/<dataset_id>.deg.tsv`.
 - Do not pre-filter by significance here; meta step applies thresholds.
+ 

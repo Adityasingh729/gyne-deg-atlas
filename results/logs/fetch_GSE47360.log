@@ -1,0 +1,12 @@
+Fetching dataset: GSE47360 (Microarray) from source: GEO_matrix
+Using locally cached series matrix file: data/expr/GSE47360_series_matrix.txt.gz
+Failed to perform HTTP request.
+Caused by error in `curl::curl_fetch_memory()`:
+! Stream error in the HTTP/2 framing layer [www.ncbi.nlm.nih.gov]:
+HTTP/2 stream 1 was not closed cleanly: STREAM_CLOSED (err 5)File stored at:
+C:\Users\adity\AppData\Local\Temp\RtmpIpcAY1/GPL6244.soft.gz
+Error in downloadFile(myurl, destfile, mode = mode, quiet = TRUE) : 
+  Failed to download C:\Users\adity\AppData\Local\Temp\RtmpIpcAY1/GPL6244.soft.gz!
+Calls: getGEO ... parseGSEMatrix -> getGEO -> getGEOfile -> downloadFile
+Execution halted
+ 

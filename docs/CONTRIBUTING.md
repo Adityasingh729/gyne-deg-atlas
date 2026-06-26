@@ -9,3 +9,4 @@
 4. Commit your DEG tables + a short note in the PR describing QC (PCA, outliers, group sizes).
 5. One branch per person: `feature/<condition>-<tissue>-<yourname>`. Open a PR; do not push to main.
 6. Every commit is your visible GitHub contribution - commit small and often.
+ 

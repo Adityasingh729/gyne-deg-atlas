@@ -9,7 +9,7 @@ import glob
 import os
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import LeaveOneGroupOut, StratifiedKFold
 from sklearn.metrics import roc_auc_score
 from sklearn.preprocessing import StandardScaler
@@ -17,6 +17,8 @@ from sklearn.preprocessing import StandardScaler
 # import shap
 
 def main():
+    import warnings
+    warnings.filterwarnings("ignore")
     ap = argparse.ArgumentParser()
     ap.add_argument("--meta_dir")
     ap.add_argument("--expr_dir")
@@ -167,8 +169,8 @@ def main():
             print(f"Fold {fold}: Skipping AUROC because train or test set contains only one class.")
             continue
             
-        # Fit ElasticNet Logistic Regression
-        model = LogisticRegression(penalty="elasticnet", solver="saga", l1_ratio=0.5, C=1.0, max_iter=5000, random_state=42)
+        # Fit RandomForest Classifier
+        model = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=1)
         model.fit(X_train, y_train)
         
         preds = model.predict_proba(X_test)[:, 1]
@@ -182,22 +184,18 @@ def main():
     mean_auc = np.mean(aurocs) if aurocs else 0.5
     print(f"Mean Cross-Validation AUROC: {mean_auc:.4f}")
     
-    # 4) Fit final model and compute SHAP values
+    # 4) Fit final model and compute feature importances
     print("Fitting final model on all data...")
-    model_full = LogisticRegression(penalty="elasticnet", solver="saga", l1_ratio=0.5, C=1.0, max_iter=5000, random_state=42)
+    model_full = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=1)
     model_full.fit(X_scaled_df, y)
     
-    coefs = model_full.coef_[0]
-    
-    # Compute feature importance (fallback directly to absolute coefficients to prevent SHAP DLL crash)
-    print("SHAP calculation skipped. Using absolute coefficients for feature importance.")
-    mean_shap = np.abs(coefs)
+    importances = model_full.feature_importances_
         
     # Compile report
     report = pd.DataFrame({
         "gene": sig_genes,
-        "coefficient": coefs,
-        "mean_abs_shap": mean_shap
+        "coefficient": importances,
+        "mean_abs_shap": importances
     })
     
     # Sort by absolute SHAP value descending
@@ -206,7 +204,7 @@ def main():
     
     # Save report with CV metrics in headers
     with open(a.out, "w") as f:
-        f.write("# Gyne-DEG Atlas Machine Learning Gene Panel\n")
+        f.write("# Gyne-DEG Atlas Machine Learning Gene Panel (RandomForest)\n")
         f.write(f"# CV Type: {cv_type}\n")
         f.write(f"# Mean AUROC: {mean_auc:.4f}\n")
         f.write(f"# Fold Details: {', '.join(fold_details)}\n")
@@ -217,4 +215,12 @@ def main():
     print(f"ML report written successfully to {a.out}")
 
 if __name__ == "__main__":
-    main()
+    import traceback
+    import sys
+    try:
+        main()
+    except Exception as e:
+        print(f"Fatal error during execution: {e}", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
+        sys.exit(1)
+ 

@@ -29,3 +29,4 @@ combining samples that are not biologically comparable.
 ## Minimum-N rule
 - A stratum is **meta-analysed only if it has >= `meta.min_datasets` (default 4)** datasets.
 - Smaller strata -> single-dataset/descriptive DEG, reported as such (never called a "meta-analysis").
+ 

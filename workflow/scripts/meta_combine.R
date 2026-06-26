@@ -40,9 +40,8 @@ message("Datasets in stratum (N = ", length(datasets_in_stratum), "): ", paste(d
 # Load DEG files
 deg_data <- list()
 for (ds in datasets_in_stratum) {
-  # File path could be results/deg/{ds}.deg.tsv
-  # On Windows, we'll look for it
-  file_path <- file.path(deg_dir, paste0(ds, ".deg.symbols.tsv"))
+  # File path is results/deg/{ds}.deg.tsv
+  file_path <- file.path(deg_dir, paste0(ds, ".deg.tsv"))
   if (file.exists(file_path)) {
     dt <- fread(file_path)
     if (nrow(dt) > 0) {
@@ -235,3 +234,4 @@ if (method == "RRA") {
 }
 
 gc()
+ 

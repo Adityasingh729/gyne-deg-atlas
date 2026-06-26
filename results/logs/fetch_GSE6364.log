@@ -1,0 +1,14 @@
+Fetching dataset: GSE6364 (Microarray) from source: GEO_matrix
+Found 1 file(s)
+GSE6364_series_matrix.txt.gz
+Sample group breakdown:
+
+      Control Endometriosis          <NA> 
+           16            21             0 
+Successfully saved RDS to: data/expr/GSE6364.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE6364.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE6364.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6667353 356.1   12271744 655.4  8199530 438.0
+Vcells 34166149 260.7   60444335 461.2 50303610 383.8
+ 

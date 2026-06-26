@@ -36,3 +36,4 @@ out <- data.table(gene=res$gene, log2FC=res$log2FoldChange, p=res$pvalue,
                   padj=res$padj, n=ncol(counts))
 fwrite(out, opt$out, sep="\t")
 gc()
+ 

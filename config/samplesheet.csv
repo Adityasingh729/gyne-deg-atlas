@@ -2,55 +2,20 @@ dataset_id,condition,tissue_primary,subtissue,platform,technique,data_source,gro
 GSE34526,PCOS,Granulosa,whole-GC,GPL6244,Microarray,GEO_matrix,group,PCOS,Control,,IVF-stimulated
 GSE199225,PCOS,Skeletal muscle,vastus,GPL24676,RNA-seq,recount3,group,PCOS,Control,,
 GSE6364,Endometriosis,Endometrium,eutopic,GPL570,Microarray,GEO_matrix,group,Endometriosis,Control,secretory,
-GSE254251,Endometriosis,Endometrial stromal cells,,GPL11154,RNA-seq,recount3,treatment:ch1,"2 nM of 1,25(OH)2VitaminD3",vehicle (0.001% EtOH),,Auto-generated metadata
-GSE40007,Endometriosis,Endometrial stromal cells,,GPL2895,Microarray,GEO_matrix,treatment:ch1,TNFα,vehicle,,Auto-generated metadata
-GSE31683,Endometriosis,Endometrial stromal cells,,GPL570,Microarray,GEO_matrix,group,NT,vehicle,,Auto-generated metadata
-GSE47360,Endometriosis,Endometrial stromal cells,,GPL6244,Microarray,GEO_matrix,disease status:ch1,endometriosis,non-endometriosis,,Auto-generated metadata
-GSE139954,Endometriosis,Endometrial stromal cells,,GPL17077,Microarray,GEO_matrix,description,mRNA expression in NESCs transfected precursor hsa-miR-100,mRNA expression in NESCs transfected negative control precursor,,Auto-generated metadata
-GSE56854,Endometriosis,Endometrial stromal cells,,GPL13497,Microarray,GEO_matrix,source_name_ch1,normal endometrial stromal cells transfected with precursor hsa-miR-210,normal endometrial stromal cells transfected with negative control precursor miRNA,,Auto-generated metadata
-GSE75425,Endometriosis,Endometrial stromal cells,,GPL17077,Microarray,GEO_matrix,characteristics_ch1.3,treatment: 12d dibutyryl-cAMP and dienogest,treatment: 12d 10% charcoal-stripped heat-inactivated FBS,,Auto-generated metadata
-GSE107469,Endometriosis,Endometrial stromal cells,,GPL570,Microarray,GEO_matrix,characteristics_ch1.2,transfected with: siRNA oligo against COUP-TFII,transfected with: control siRNA oligo,,Auto-generated metadata
-GSE135485,Endometriosis,Endometrium,,GPL21290,RNA-seq,recount3,subject status:ch1,patient with endometriosis,healthy control,,Auto-generated metadata
-GSE148473,Endometriosis,Endometrium,,GPL24676,RNA-seq,recount3,characteristics_ch1.1,genotype/variation: siARID1A,genotype/variation: Control,,Auto-generated metadata
-GSE226575,Endometriosis,Endometrium,,GPL24676,RNA-seq,recount3,characteristics_ch1,tissue: Endometriosis-associated ovarian cancer over time (EAOC),tissue: Endometrialcyst of ovary (EMC),,Auto-generated metadata
-GSE153739,Endometriosis,Endometrium,,GPL18573,RNA-seq,recount3,group:ch1,Endometriosis,Control,,Auto-generated metadata
-GSE152661,Endometriosis,Endometrium,,GPL18573,RNA-seq,recount3,condition:ch1,siBRG1,non-targeting siRNA control,,Auto-generated metadata
-GSE145701,Endometriosis,Endometrium,,GPL6244,Microarray,GEO_matrix,disease state:ch1,Endometriosis Stage I,Normal,,Auto-generated metadata
-GSE120103,Endometriosis,Endometrium,,GPL6480,Microarray,GEO_matrix,sample group:ch1,Endometrium  from Stage IV Ovarian Endometriosis of fertile women,Disease free Endometrium of fertile women,,Auto-generated metadata
-GSE7305,Endometriosis,Endometrium,,GPL570,Microarray,GEO_matrix,group,Endometriosis,Control,,Auto-generated metadata
-GSE248593,Endometriosis,Endometrium,,GPL25759,Microarray,GEO_matrix,disease state:ch1,ovarian endometriosis,normal tissue,,Auto-generated metadata
-GSE101176,Endometriosis,Endometrium,,GPL2895,Microarray,GEO_matrix,disease severity:ch1,minimal endometriosis,no disease,,Auto-generated metadata
-GSE241134,Endometriosis,Endometrium,,GPL23126,Microarray,GEO_matrix,characteristics_ch1.1,treatment: seminal,treatment: placebo,,Auto-generated metadata
-GSE202571,Endometriosis,Eutopic endometrium,,GPL21697,RNA-seq,recount3,disease state:ch1,endometriosis without surgical treatment,endometriosis with surgical treatment,,Auto-generated metadata
-GSE130435,Endometriosis,Eutopic endometrium,,GPL20301,RNA-seq,recount3,disease state:ch1,endometriosis,healthy,,Auto-generated metadata
-GSE315857,Endometriosis,Eutopic endometrium,,GPL24676,RNA-seq,recount3,group,Endometriosis,Control,,Auto-generated metadata
-GSE303635,Endometriosis,Stromal cells,,GPL34284,RNA-seq,recount3,characteristics_ch1,tissue: Deep endometriosis lesion,tissue: Eutopic endometrium,,Auto-generated metadata
-GSE284362,Endometriosis,Stromal cells,,GPL24676,RNA-seq,recount3,treatment:ch1,E2,control,,Auto-generated metadata
-GSE87809,Endometriosis,Stromal cells,,GPL11154,RNA-seq,recount3,disease state:ch1,endometriosis,control,,Auto-generated metadata
-GSE309027,Endometriosis,Stromal cells,,GPL35417,RNA-seq,recount3,treatment:ch1,"Tucidinostat 10μM and DMSO 10μM, 48h","DMSO 10μM, 48h",,Auto-generated metadata
-GSE31515,Endometriosis,Stromal cells,,GPL6480,Microarray,GEO_matrix,characteristics_ch1.3,diagnosis: endometriosis,diagnosis: leiomyoma,,Auto-generated metadata
-GSE136412,Endometriosis,Stromal cells,,GPL17077,Microarray,GEO_matrix,characteristics_ch1,growth: 2D culture,growth: 3D floating gel culture,,Auto-generated metadata
-GSE75423,Endometriosis,Stromal cells,,GPL13497,Microarray,GEO_matrix,characteristics_ch1.3,treatment: 12d dibutyryl-cAMP and dienogest,treatment: 12d 10% charcoal-stripped heat-inactivated FBS,,Auto-generated metadata
-GSE155489,PCOS,Cumulus cells,,GPL20795,RNA-seq,recount3,disease state:ch1,polycystic ovary syndrome(PCOS),Control,,Auto-generated metadata
-GSE10946,PCOS,Cumulus cells,,GPL570,Microarray,GEO_matrix,group,PCOS,Control,,Auto-generated metadata
-GSE168404,PCOS,Granulosa,,GPL16791,RNA-seq,recount3,group,PCOS,Control,,Auto-generated metadata
-GSE216609,PCOS,Granulosa,,GPL21290,RNA-seq,recount3,disease state:ch1,polycystic ovary syndrome (PCOS),control,,Auto-generated metadata
-GSE328499,PCOS,Granulosa,,GPL29480,RNA-seq,recount3,characteristics_ch1.2,treatment: IAA,treatment: control,,Auto-generated metadata
-GSE294074,PCOS,Granulosa,,GPL21311,RNA-seq,recount3,group,PCOS,Control,,Auto-generated metadata
-GSE191022,PCOS,Granulosa,,GPL24676,RNA-seq,recount3,genotype:ch1,IGF2BP2 overexpression,control,,Auto-generated metadata
-GSE193123,PCOS,Granulosa,,GPL24676,RNA-seq,recount3,diagnosis:ch1,Polycystic ovary syndrome (PCOS),Healthy,,Auto-generated metadata
-GSE98595,PCOS,Granulosa,,GPL6244,Microarray,GEO_matrix,diagnosis:ch1,polycystic ovarian syndrome (PCOS),non-polycystic ovarian syndrome (PCOS),,Auto-generated metadata
-GSE80432,PCOS,Granulosa,,GPL6244,Microarray,GEO_matrix,disease state:ch1,PCOS,non-PCOS,,Auto-generated metadata
-GSE106724,PCOS,Granulosa,,GPL21096,Microarray,GEO_matrix,disease state:ch1,PCOS with hyperandrogenism,normal control,,Auto-generated metadata
-GSE137684,PCOS,Granulosa,,GPL17077,Microarray,GEO_matrix,characteristics_ch1.2,condition: Normoandrogenic PCOS,condition: Normal,,Auto-generated metadata
-GSE102293,PCOS,Granulosa,,GPL570,Microarray,GEO_matrix,characteristics_ch1.1,phenotype: PCOS (Polycystic ovary syndrome),phenotype: normal,,Auto-generated metadata
-GSE114419,PCOS,Granulosa,,GPL17586,Microarray,GEO_matrix,diagnosis:ch1,Polycystic Ovary Syndrome (PCOS),healthy control,,Auto-generated metadata
-GSE8157,PCOS,Skeletal muscle,,GPL570,Microarray,GEO_matrix,group,PCOS,Control,,Auto-generated metadata
-GSE6798,PCOS,Skeletal muscle,,GPL570,Microarray,GEO_matrix,group,PCOS,Control,,Auto-generated metadata
-GSE188740,PCOS,Ovary/ovarian,,GPL24676,RNA-seq,recount3,disease:ch1,PCOS,CTRL,,Auto-generated metadata
-GSE267287,PCOS,Ovary/ovarian,,GPL24676,RNA-seq,recount3,disease:ch1,PCOS,Control,,Auto-generated metadata
-GSE138518,PCOS,Ovary/ovarian,,GPL11154,RNA-seq,recount3,disease state:ch1,Polycystic ovary syndrome,normal,,Auto-generated metadata
-GSE87435,PCOS,Ovary/ovarian,,GPL96,Microarray,GEO_matrix,source_name_ch1,"PCOS, ovary sample","TSX, ovary sample",,Auto-generated metadata
-GSE54250,PCOS,Whole blood,,GPL10558,Microarray,GEO_matrix,diagnosis:ch1,Polycystic Ovarian Syndrome (PCOS),Healthy,,Auto-generated metadata
-GSE54248,PCOS,Whole blood,,GPL10558,Microarray,GEO_matrix,diagnosis:ch1,Polycystic Ovarian Syndrome (PCOS),Healthy,,Auto-generated metadata
-GSE5090,PCOS,Adipose,,GPL96,Microarray,GEO_matrix,group,PCOS,Control,,
+GSE40007,Endometriosis,Endometrial stromal cells,,GPL2895,Microarray,GEO_matrix,treatment:ch1,TNFα,vehicle,,TNFa-stimulated endometrial stromal cells (ESC)
+GSE47360,Endometriosis,Endometrial stromal cells,,GPL6244,Microarray,GEO_matrix,disease status:ch1,endometriosis,non-endometriosis,,Endometriosis vs control ESC comparison
+GSE56854,Endometriosis,Endometrial stromal cells,,GPL13497,Microarray,GEO_matrix,source_name_ch1,normal endometrial stromal cells transfected with precursor hsa-miR-210,normal endometrial stromal cells transfected with negative control precursor miRNA,,miR-210 transfection vs negative control in ESC
+GSE75425,Endometriosis,Endometrial stromal cells,,GPL17077,Microarray,GEO_matrix,characteristics_ch1.3,"treatment: 12d dibutyryl-cAMP and dienogest","treatment: 12d 10% charcoal-stripped heat-inactivated FBS",,Decidualized ESC comparison (cAMP and dienogest vs FBS)
+GSE102293,PCOS,Granulosa,,GPL570,Microarray,GEO_matrix,characteristics_ch1.1,"phenotype: PCOS (Polycystic ovary syndrome)",phenotype: normal,,PCOS vs normal phenotype in granulosa cells (GC)
+GSE106724,PCOS,Granulosa,,GPL21096,Microarray,GEO_matrix,disease state:ch1,PCOS with hyperandrogenism,normal control,,PCOS with hyperandrogenism vs normal control in GC
+GSE114419,PCOS,Granulosa,,GPL17586,Microarray,GEO_matrix,diagnosis:ch1,Polycystic Ovary Syndrome (PCOS),healthy control,,Polycystic Ovary Syndrome (PCOS) vs healthy control in GC
+GSE137684,PCOS,Granulosa,,GPL17077,Microarray,GEO_matrix,characteristics_ch1.2,condition: Normoandrogenic PCOS,condition: Normal,,Normoandrogenic PCOS vs normal control in GC
+GSE6798,PCOS,Skeletal muscle,,GPL570,Microarray,GEO_matrix,group,PCOS,Control,,PCOS vs control in skeletal muscle
+GSE8157,PCOS,Skeletal muscle,,GPL570,Microarray,GEO_matrix,group,PCOS,Control,,PCOS vs control in skeletal muscle
+GSE316028,Endometriosis,Endometrial stromal cells,,GPL24676,RNA-seq,GEO_matrix,group,siPC,NC,,
+GSE44207,Endometriosis,Endometrial stromal cells,,GPL13497,Microarray,GEO_matrix,group,VPA-treated,untreated,,
+GSE51981,Endometriosis,Endometrium,,GPL570,Microarray,GEO_matrix,group,Endometriosis,Control,,
+GSE286315,Endometriosis,Endometrial stromal cells,,GPL24676,RNA-seq,GEO_matrix,group,HOXC4 KO,Control EcSCs,,
+GSE207000,Adenomyosis,Endometrium,,GPL24676,RNA-seq,GEO_matrix,group,EGR1-KD,Scr,,
+GSE262302,Adenomyosis,Plasma exosomes,,GPL24676,RNA-seq,GEO_matrix,group,Adenomyosis,Control,,
+ 

@@ -1,0 +1,30 @@
+Running enrichment and hub analysis for file: results/meta/PCOS__Granulosa.meta.tsv
+Fewer than 10 genes passed the padj < 0.05 & |log2FC| > 1 threshold. Relaxing to top 100 genes by p-value.
+Number of genes selected for enrichment & PPI network: 100
+'select()' returned 1:1 mapping between keys and columns
+Warning message:
+In bitr(sig_genes, fromType = "SYMBOL", toType = "ENTREZID", OrgDb = "org.Hs.eg.db") :
+  50% of input gene IDs are fail to map...
+Reading KEGG annotation online: "https://rest.kegg.jp/link/hsa/pathway"...
+Warning messages:
+1: In (function (con = stdin(), n = -1L, ok = TRUE, warn = TRUE, encoding = "unknown",  :
+  URL 'https://rest.kegg.jp/link/hsa/pathway': Timeout of 60 seconds was reached
+2: In value[[3L]](cond) : enrichKEGG failed: cannot read from connection
+Saved enrichment results to: results/enrich/PCOS__Granulosa.enrich.tsv
+trying URL 'https://stringdb-downloads.org/download/protein.aliases.v11.5/9606.protein.aliases.v11.5.txt.gz'
+Content type 'application/octet-stream' length 21726816 bytes (20.7 MB)
+=====
+downloaded 2.4 MB
+
+Warning messages:
+1: In download.file(urlStr, temp) :
+  downloaded length 2473713 != reported length 21726816
+2: In download.file(urlStr, temp) :
+  URL 'https://stringdb-downloads.org/download/protein.aliases.v11.5/9606.protein.aliases.v11.5.txt.gz': Timeout of 60 seconds was reached
+3: In value[[3L]](cond) :
+  STRINGdb analysis failed or skipped (e.g. offline/network issue): download from 'https://stringdb-downloads.org/download/protein.aliases.v11.5/9606.protein.aliases.v11.5.txt.gz' failed
+Saved PPI hubs to: results/enrich/PCOS__Granulosa.hubs.tsv
+           used  (Mb) gc trigger  (Mb) max used   (Mb)
+Ncells  6302963 336.7   16902905 902.8 26410788 1410.5
+Vcells 21058235 160.7   59569768 454.5 59569768  454.5
+ 

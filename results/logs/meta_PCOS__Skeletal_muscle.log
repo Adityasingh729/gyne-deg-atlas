@@ -1,0 +1,6 @@
+Running meta-analysis for stratum: PCOS__Skeletal_muscle using method: RRA
+Datasets in stratum (N = 3): GSE199225, GSE6798, GSE8157
+Successfully loaded 3 DEG datasets.
+Strata has 3 datasets, which is less than min_datasets (4). Running descriptive combination fallback.
+Wrote descriptive fallback output with 25599 genes.
+ 

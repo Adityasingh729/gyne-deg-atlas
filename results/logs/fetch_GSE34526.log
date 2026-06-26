@@ -1,0 +1,14 @@
+Fetching dataset: GSE34526 (Microarray) from source: GEO_matrix
+Found 1 file(s)
+GSE34526_series_matrix.txt.gz
+Sample group breakdown:
+
+Control    PCOS    <NA> 
+      3       7       0 
+Successfully saved RDS to: data/expr/GSE34526.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE34526.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE34526.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6685629 357.1   12271744 655.4  8530155 455.6
+Vcells 30266812 231.0   56231466 429.1 56231466 429.1
+ 

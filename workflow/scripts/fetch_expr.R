@@ -284,6 +284,24 @@ if (grepl("RNA-seq", tech, ignore.case=TRUE)) {
         stop(e)
       })
       
+      if (dataset == "GSE286315") {
+        gse286315_cols <- c(
+          "gene_id", "S08NP0D", "S08YP0D", "18NP0D_count", "18NP6B1_count",
+          "18YP0D_count", "18YP6C2_count", "30N-CON_count", "30N-KO_count",
+          "33N-CON_count", "33N-KO_count", "34N-CON_count", "34N-KO_count"
+        )
+        dt <- dt[, gse286315_cols, with=FALSE]
+        mapping_dict <- c(
+          "S08NP0D" = "GSM8723553", "S08YP0D" = "GSM8723550",
+          "18NP0D_count" = "GSM8723554", "18NP6B1_count" = "GSM8723555",
+          "18YP0D_count" = "GSM8723551", "18YP6C2_count" = "GSM8723552",
+          "30N-CON_count" = "GSM8723559", "30N-KO_count" = "GSM8723556",
+          "33N-CON_count" = "GSM8723560", "33N-KO_count" = "GSM8723557",
+          "34N-CON_count" = "GSM8723561", "34N-KO_count" = "GSM8723558"
+        )
+        setnames(dt, names(mapping_dict), mapping_dict)
+      }
+      
       # Filter columns to counts if mixed with RPKM/FPKM/Annotations
       col_names <- colnames(dt)
       gene_col <- col_names[1]
@@ -303,9 +321,15 @@ if (grepl("RNA-seq", tech, ignore.case=TRUE)) {
       counts <- as.matrix(dt[, -1, with=FALSE])
       rownames(counts) <- as.character(dt[[1]])
       
-      # Fetch metadata from GEO
+      # Fetch metadata from GEO (getGPL=FALSE is safe here since RNA-seq doesn't use platform fData)
       suppressMessages(library(GEOquery))
-      g <- getGEO(dataset, GSEMatrix=TRUE)
+      local_matrix_file <- file.path("data/expr", paste0(dataset, "_series_matrix.txt.gz"))
+      if (file.exists(local_matrix_file)) {
+        message("Using locally cached series matrix file: ", local_matrix_file)
+        g <- getGEO(filename=local_matrix_file, getGPL=FALSE)
+      } else {
+        g <- getGEO(dataset, GSEMatrix=TRUE, getGPL=FALSE, destdir="data/expr")
+      }
       if (is.list(g)) {
         suppressMessages(library(data.table))
         meta <- as.data.frame(rbindlist(lapply(g, pData), fill=TRUE))
@@ -451,7 +475,25 @@ if (grepl("RNA-seq", tech, ignore.case=TRUE)) {
   # Microarray -> GEO_matrix
   suppressMessages(library(GEOquery))
   
-  g <- getGEO(dataset, GSEMatrix=TRUE)
+  # Bypass downloading heavy 1.8 GB GPL SOFT files for GPL13497 and GPL2895
+  # by setting getGPL=FALSE. We will map their probes locally via Bioconductor packages.
+  # For other platforms, getGPL=TRUE (default) is used to load cached GPL files.
+  get_gpl_val <- TRUE
+  if (file.exists("config/samplesheet.csv")) {
+    samples_dt <- fread("config/samplesheet.csv")
+    r_row <- samples_dt[dataset_id == dataset]
+    if (nrow(r_row) > 0 && r_row$platform[1] %in% c("GPL13497", "GPL2895")) {
+      get_gpl_val <- FALSE
+      message("Platform is ", r_row$platform[1], ". Bypassing heavy submitter GPL download (getGPL=FALSE).")
+    }
+  }
+  local_matrix_file <- file.path("data/expr", paste0(dataset, "_series_matrix.txt.gz"))
+  if (file.exists(local_matrix_file)) {
+    message("Using locally cached series matrix file: ", local_matrix_file)
+    g <- getGEO(filename=local_matrix_file, getGPL=get_gpl_val, destdir="data/expr")
+  } else {
+    g <- getGEO(dataset, GSEMatrix=TRUE, getGPL=get_gpl_val, destdir="data/expr")
+  }
   if (is.list(g)) {
     gset <- g[[1]]
   } else {
@@ -481,16 +523,62 @@ if (grepl("RNA-seq", tech, ignore.case=TRUE)) {
       symbol_idx_any <- grep("symbol", cols_lower)
       if (length(symbol_idx_any) > 0) {
         symbol_col <- colnames(fdata)[symbol_idx_any[1]]
+      } else {
+        assign_idx <- which(cols_lower == "gene_assignment" | cols_lower == "gene assignment")
+        if (length(assign_idx) > 0) {
+          symbol_col <- colnames(fdata)[assign_idx[1]]
+        }
       }
     }
   }
   
+  symbols <- NULL
   if (!is.null(symbol_col)) {
     symbols <- fdata[[symbol_col]]
-    symbols <- sapply(strsplit(as.character(symbols), " /// "), `[`, 1)
-    symbols <- sapply(strsplit(as.character(symbols), "//"), `[`, 1)
-    symbols <- trimws(symbols)
+    if (grepl("assignment", symbol_col, ignore.case=TRUE)) {
+      symbols <- sapply(strsplit(as.character(symbols), " /// "), function(x) {
+        if (length(x) == 0 || is.na(x[1]) || x[1] == "---" || x[1] == "") return(NA)
+        parts <- strsplit(x[1], " // ")[[1]]
+        if (length(parts) >= 2) return(parts[2])
+        return(NA)
+      })
+    } else {
+      symbols <- sapply(strsplit(as.character(symbols), " /// "), `[`, 1)
+      symbols <- sapply(strsplit(as.character(symbols), "//"), `[`, 1)
+      symbols <- trimws(symbols)
+    }
+  } else {
+    # Fallback to Bioconductor annotation packages if symbol_col is not found or empty
+    platform <- annotation(gset)
+    message("Could not find gene symbol column in fData. Platform detected: ", platform)
     
+    db_pkg <- NULL
+    if (platform == "GPL13497" || platform == "GPL13497.db" || grepl("026652", platform)) {
+      db_pkg <- "HsAgilentDesign026652.db"
+    } else if (platform == "GPL2895" || platform == "GPL2895.db" || grepl("hwgcod", platform)) {
+      db_pkg <- "hwgcod.db"
+    }
+    
+    if (!is.null(db_pkg)) {
+      message("Attempting to map probe IDs to symbols using package: ", db_pkg)
+      if (suppressMessages(require(db_pkg, character.only=TRUE))) {
+        db_obj <- get(db_pkg)
+        probe_ids <- rownames(counts)
+        mapped_df <- tryCatch({
+          select(db_obj, keys=probe_ids, columns="SYMBOL", keytype="PROBEID")
+        }, error = function(e) NULL)
+        
+        if (!is.null(mapped_df) && nrow(mapped_df) > 0) {
+          # Match mapped symbols back to probe_ids
+          matched_symbols <- mapped_df$SYMBOL[match(probe_ids, mapped_df$PROBEID)]
+          symbols <- matched_symbols
+          message("Successfully mapped probes using ", db_pkg)
+        }
+      }
+    }
+  }
+  
+  if (!is.null(symbols)) {
     rownames(counts) <- symbols
     valid <- !is.na(rownames(counts)) & rownames(counts) != "" & rownames(counts) != "---"
     counts <- counts[valid, , drop=FALSE]
@@ -503,7 +591,7 @@ if (grepl("RNA-seq", tech, ignore.case=TRUE)) {
       rownames(counts) <- counts_agg$gene
     }
   } else {
-    warning("Could not find gene symbol column in fData. Keeping probe IDs as rownames.")
+    warning("Could not map probe IDs to gene symbols. Keeping probe IDs as rownames.")
   }
 }
 
@@ -572,6 +660,68 @@ if (dataset == "GSE34526") {
 } else if (dataset == "GSE5090") {
   meta$group[grepl("pcos", meta$title, ignore.case=TRUE)] <- "PCOS"
   meta$group[grepl("control", meta$title, ignore.case=TRUE)] <- "Control"
+} else if (dataset == "GSE316028") {
+  col_idx <- grep("treatment", colnames(meta), ignore.case=TRUE)
+  if (length(col_idx) > 0) {
+    val <- as.character(meta[[col_idx[1]]])
+    meta$group[grepl("NC", val, ignore.case=TRUE)] <- "NC"
+    meta$group[grepl("siPC", val, ignore.case=TRUE)] <- "siPC"
+  }
+} else if (dataset == "GSE44207") {
+  meta$group[grepl("untreated", meta$title, ignore.case=TRUE)] <- "untreated"
+  meta$group[grepl("VPA-treated", meta$title, ignore.case=TRUE)] <- "VPA-treated"
+} else if (dataset == "GSE51981") {
+  col_idx <- grep("endometriosis/no endometriosis|endometriosis", colnames(meta), ignore.case=TRUE)
+  col_idx <- col_idx[!grepl("severity", colnames(meta)[col_idx], ignore.case=TRUE)]
+  if (length(col_idx) > 0) {
+    val <- as.character(meta[[col_idx[1]]])
+    meta$group[grepl("Non-Endometriosis|no endometriosis", val, ignore.case=TRUE)] <- "Control"
+    meta$group[grepl("^Endometriosis$", val, ignore.case=TRUE)] <- "Endometriosis"
+  }
+} else if (dataset == "GSE286315") {
+  meta$group[grepl("Control EcSCs", meta$title, ignore.case=TRUE)] <- "Control EcSCs"
+  meta$group[grepl("HOXC4 KO EcSCs", meta$title, ignore.case=TRUE)] <- "HOXC4 KO"
+} else if (dataset == "GSE207000") {
+  meta$group[grepl("EGR1-KD", meta$title, ignore.case=TRUE)] <- "EGR1-KD"
+  meta$group[grepl("Scr", meta$title, ignore.case=TRUE)] <- "Scr"
+} else if (dataset == "GSE262302") {
+  col_idx <- grep("tissue", colnames(meta), ignore.case=TRUE)
+  if (length(col_idx) > 0) {
+    val <- as.character(meta[[col_idx[1]]])
+    meta$group[grepl("non-adenomyosis|control", val, ignore.case=TRUE)] <- "Control"
+    meta$group[grepl("^adenomyosis", val, ignore.case=TRUE)] <- "Adenomyosis"
+  }
+}
+
+# If group column is still completely NA, try using the samplesheet-specified column and labels
+if (all(is.na(meta$group)) && file.exists("config/samplesheet.csv")) {
+  samples_dt <- tryCatch({ fread("config/samplesheet.csv") }, error = function(e) NULL)
+  if (!is.null(samples_dt)) {
+    r_row <- samples_dt[dataset_id == dataset]
+    if (nrow(r_row) > 0) {
+      group_col <- r_row$group_column[1]
+      case_lbl <- r_row$case_label[1]
+      ctrl_lbl <- r_row$control_label[1]
+      
+      if (!is.na(group_col) && group_col != "" && group_col %in% colnames(meta)) {
+        val <- as.character(meta[[group_col]])
+        meta$group[val == case_lbl] <- case_lbl
+        meta$group[val == ctrl_lbl] <- ctrl_lbl
+        # Case insensitive check
+        na_idx <- is.na(meta$group)
+        if (any(na_idx)) {
+          meta$group[na_idx & tolower(val) == tolower(case_lbl)] <- case_lbl
+          meta$group[na_idx & tolower(val) == tolower(ctrl_lbl)] <- ctrl_lbl
+        }
+        # Substring/grepl check
+        na_idx <- is.na(meta$group)
+        if (any(na_idx)) {
+          meta$group[na_idx & grepl(case_lbl, val, ignore.case=TRUE)] <- case_lbl
+          meta$group[na_idx & grepl(ctrl_lbl, val, ignore.case=TRUE)] <- ctrl_lbl
+        }
+      }
+    }
+  }
 }
 
 # If group column is still completely NA, try fallback to check for any column name matching 'group'
@@ -613,3 +763,4 @@ message("Successfully saved sidecar counts to: ", counts_tsv)
 message("Successfully saved sidecar meta to: ", meta_tsv)
 
 gc()
+ 

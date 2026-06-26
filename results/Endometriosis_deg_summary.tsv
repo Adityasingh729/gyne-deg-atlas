@@ -1,52 +1,52 @@
 dataset_id	condition	tissue	technique	samples_estimate	n_case_analyzed	n_control_analyzed	n_DEG_padj05	status	notes
 GSE313775	Endometriosis	UNCLEAR - check	RNA-seq	66				unmapped	NA
-GSE135485	Endometriosis	Endometrium	RNA-seq	58	54	4	103	analyzed	NA
+GSE135485	Endometriosis	Endometrium	RNA-seq	58				unmapped	NA
 GSE134056	Endometriosis	UNCLEAR - check	RNA-seq	38				unmapped	NA
 GSE104176	Endometriosis	UNCLEAR - check	RNA-seq	30				unmapped	NA
-GSE303635	Endometriosis	Stromal cells	RNA-seq	20	5	5	4392	analyzed	NA
-GSE284362	Endometriosis	Stromal cells	RNA-seq	20	5	5	1	analyzed	NA
+GSE303635	Endometriosis	Stromal cells	RNA-seq	20				unmapped	NA
+GSE284362	Endometriosis	Stromal cells	RNA-seq	20				unmapped	NA
 GSE283623	Endometriosis	UNCLEAR - check	RNA-seq	19				unmapped	CANCER: malignant transformation to clear cell - conditional
-GSE130435	Endometriosis	Eutopic endometrium	RNA-seq	18	11	2	1482	analyzed	NA
-GSE148473	Endometriosis	Endometrium	RNA-seq	18	3	3	4467	analyzed	MECHANISTIC: ARID1A invasion model - verify human patient tissue
+GSE130435	Endometriosis	Eutopic endometrium	RNA-seq	18				unmapped	NA
+GSE148473	Endometriosis	Endometrium	RNA-seq	18				unmapped	MECHANISTIC: ARID1A invasion model - verify human patient tissue
 GSE230956	Endometriosis	Ovary/ovarian	RNA-seq	16				unmapped	CANCER: ovarian clear-cell carcinoma - conditional
 GSE118928	Endometriosis	Ectopic endometrium/lesion	RNA-seq	15				unmapped	NA
 GSE232713	Endometriosis	UNCLEAR - check	RNA-seq	14				unmapped	NA
 GSE205494	Endometriosis	Granulosa cells	RNA-seq	12				unmapped	NA
 GSE241751	Endometriosis	UNCLEAR - check	RNA-seq	12				unmapped	NA
-GSE254251	Endometriosis	Endometrial stromal cells	RNA-seq	12	6	6	0	analyzed	NA
 GSE282532	Endometriosis	Ectopic endometrium/lesion	RNA-seq	10				unmapped	NA
-GSE226575	Endometriosis	Endometrium	RNA-seq	9	5	4	217	analyzed	CANCER: progression to ovarian cancer - conditional
-GSE315857	Endometriosis	Eutopic endometrium	RNA-seq	8	4	4	65	analyzed	NA
-GSE309027	Endometriosis	Stromal cells	RNA-seq	8	4	4	3191	analyzed	NA
-GSE153739	Endometriosis	Endometrium	RNA-seq	7	4	3	0	analyzed	NA
+GSE226575	Endometriosis	Endometrium	RNA-seq	9				unmapped	CANCER: progression to ovarian cancer - conditional
+GSE315857	Endometriosis	Eutopic endometrium	RNA-seq	8				unmapped	NA
+GSE309027	Endometriosis	Stromal cells	RNA-seq	8				unmapped	NA
+GSE153739	Endometriosis	Endometrium	RNA-seq	7				unmapped	NA
 GSE184431	Endometriosis	UNCLEAR - check	RNA-seq	6				unmapped	NA
-GSE316028	Endometriosis	UNCLEAR - check	RNA-seq	6				unmapped	NA
+GSE316028	Endometriosis	Endometrial stromal cells	RNA-seq	6	3	3	4643	analyzed	NA
 GSE310627	Endometriosis	UNCLEAR - check	RNA-seq	6				unmapped	NA
 GSE7307	Endometriosis	UNCLEAR - check	Microarray	677				unmapped	NOT A STUDY: whole-body tissue atlas, not endo case/control
 GSE141549	Endometriosis	Endometrium	Microarray	408				unmapped	NA
-GSE51981	Endometriosis	UNCLEAR - check	Microarray	148				unmapped	NA
+GSE51981	Endometriosis	Endometrium	Microarray	148	77	71	8476	analyzed	NA
 GSE165004	Endometriosis	Endometrium	Microarray	72				unmapped	OFF-TOPIC: recurrent pregnancy loss, not endometriosis
 GSE111974	Endometriosis	Endometrium	Microarray	48				unmapped	OFF-TOPIC: implantation failure, not endometriosis
-GSE145701	Endometriosis	Endometrium	Microarray	48	16	16	484	analyzed	NA
+GSE145701	Endometriosis	Endometrium	Microarray	48				unmapped	NA
 GSE37837	Endometriosis	Ectopic endometrium/lesion	Microarray	36				unmapped	NA
 GSE25628	Endometriosis	UNCLEAR - check	Microarray	22				unmapped	NA
-GSE7305	Endometriosis	Endometrium	Microarray	20	10	10	8305	analyzed	NA
-GSE31515	Endometriosis	Stromal cells	Microarray	18	10	2	233	analyzed	NA
+GSE7305	Endometriosis	Endometrium	Microarray	20				unmapped	NA
+GSE31515	Endometriosis	Stromal cells	Microarray	18				unmapped	NA
 GSE11691	Endometriosis	Ectopic endometrium/lesion	Microarray	18				unmapped	NA
-GSE136412	Endometriosis	Stromal cells	Microarray	16	8	8	132	analyzed	NA
-GSE44207	Endometriosis	UNCLEAR - check	Microarray	16				unmapped	NA
-GSE40007	Endometriosis	Endometrial stromal cells	Microarray	12	3	3	0	analyzed	NA
-GSE248593	Endometriosis	Endometrium	Microarray	12	6	6	1559	analyzed	NA
-GSE101176	Endometriosis	Endometrium	Microarray	12	3	3	2	analyzed	NA
-GSE31683	Endometriosis	Endometrial stromal cells	Microarray	10	2	2	4367	analyzed	NA
+GSE136412	Endometriosis	Stromal cells	Microarray	16				unmapped	NA
+GSE44207	Endometriosis	Endometrial stromal cells	Microarray	16	4	4	3895	analyzed	NA
+GSE40007	Endometriosis	Endometrial stromal cells	Microarray	12	3	3	2	analyzed	NA
+GSE248593	Endometriosis	Endometrium	Microarray	12				unmapped	NA
+GSE101176	Endometriosis	Endometrium	Microarray	12				unmapped	NA
+GSE31683	Endometriosis	Endometrial stromal cells	Microarray	10				unmapped	NA
 GSE47360	Endometriosis	Endometrial stromal cells	Microarray	9	6	3	0	analyzed	NA
-GSE241134	Endometriosis	Endometrium	Microarray	9	5	4	0	analyzed	NA
-GSE139954	Endometriosis	Endometrial stromal cells	Microarray	8	4	4	0	analyzed	NA
-GSE56854	Endometriosis	Endometrial stromal cells	Microarray	8	4	4	1131	analyzed	NA
-GSE75423	Endometriosis	Stromal cells	Microarray	8	4	4	799	analyzed	NA
+GSE241134	Endometriosis	Endometrium	Microarray	9				unmapped	NA
+GSE139954	Endometriosis	Endometrial stromal cells	Microarray	8				unmapped	NA
+GSE56854	Endometriosis	Endometrial stromal cells	Microarray	8	4	4	1130	analyzed	NA
+GSE75423	Endometriosis	Stromal cells	Microarray	8				unmapped	NA
 GSE75425	Endometriosis	Endometrial stromal cells	Microarray	8	4	4	6	analyzed	NA
 GSE129919	Endometriosis	Granulosa cells	Microarray	8				unmapped	OFF-TOPIC: granulosa in-vitro culture, not endometriosis
-GSE107469	Endometriosis	Endometrial stromal cells	Microarray	6	3	3	0	analyzed	NA
+GSE107469	Endometriosis	Endometrial stromal cells	Microarray	6				unmapped	NA
 GSE67524	Endometriosis	UNCLEAR - check	Microarray	6				unmapped	NA
 GSE57733	Endometriosis	Decidua	Microarray	6				unmapped	NA
 GSE69310	Endometriosis	Ovary/ovarian	Microarray	6				unmapped	NA
+ 

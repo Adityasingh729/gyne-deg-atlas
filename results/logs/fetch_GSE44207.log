@@ -1,0 +1,20 @@
+Fetching dataset: GSE44207 (Microarray) from source: GEO_matrix
+Platform is GPL13497. Bypassing heavy submitter GPL download (getGPL=FALSE).
+Using locally cached series matrix file: data/expr/GSE44207_series_matrix.txt.gz
+Could not find gene symbol column in fData. Platform detected: GPL13497
+Attempting to map probe IDs to symbols using package: HsAgilentDesign026652.db
+Warning messages:
+1: In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called 'HsAgilentDesign026652.db'
+2: Could not map probe IDs to gene symbols. Keeping probe IDs as rownames. 
+Sample group breakdown:
+
+  untreated VPA-treated        <NA> 
+          4           4           8 
+Successfully saved RDS to: data/expr/GSE44207.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE44207.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE44207.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6421578 343.0   12092054 645.8  8276827 442.1
+Vcells 12589147  96.1   21935908 167.4 18181457 138.8
+ 

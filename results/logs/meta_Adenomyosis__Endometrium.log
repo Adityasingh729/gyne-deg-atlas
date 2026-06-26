@@ -1,0 +1,6 @@
+Running meta-analysis for stratum: Adenomyosis__Endometrium using method: RRA
+Datasets in stratum (N = 1): GSE207000
+Successfully loaded 1 DEG datasets.
+Strata has 1 datasets, which is less than min_datasets (4). Running descriptive combination fallback.
+Wrote descriptive fallback output with 14453 genes.
+ 

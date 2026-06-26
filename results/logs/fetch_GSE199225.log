@@ -1,0 +1,19 @@
+Fetching dataset: GSE199225 (RNA-seq) from source: recount3
+2026-06-19 01:31:31.484742 caching file sra.recount_project.MD.gz.
+2026-06-19 01:31:32.250986 caching file gtex.recount_project.MD.gz.
+2026-06-19 01:31:33.006758 caching file tcga.recount_project.MD.gz.
+Processing local count file: GSE199225_counts.tsv.gz
+Found 1 file(s)
+GSE199225_series_matrix.txt.gz
+'select()' returned 1:many mapping between keys and columns
+Sample group breakdown:
+
+Control    PCOS    <NA> 
+     25      24       0 
+Successfully saved RDS to: data/expr/GSE199225.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE199225.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE199225.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  9519222 508.4   16730800 893.6 16730800 893.6
+Vcells 29395649 224.3   66947210 510.8 66929683 510.7
+ 

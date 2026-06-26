@@ -1,0 +1,18 @@
+Fetching dataset: GSE56854 (Microarray) from source: GEO_matrix
+Platform is GPL13497. Bypassing heavy submitter GPL download (getGPL=FALSE).
+Using locally cached series matrix file: data/expr/GSE56854_series_matrix.txt.gz
+Could not find gene symbol column in fData. Platform detected: GPL13497
+Attempting to map probe IDs to symbols using package: HsAgilentDesign026652.db
+'select()' returned 1:1 mapping between keys and columns
+Successfully mapped probes using HsAgilentDesign026652.db
+Sample group breakdown:
+
+<NA> 
+   8 
+Successfully saved RDS to: data/expr/GSE56854.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE56854.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE56854.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  7512093 401.2   12083287 645.4  9420715 503.2
+Vcells 14713495 112.3   26390652 201.4 18204187 138.9
+ 

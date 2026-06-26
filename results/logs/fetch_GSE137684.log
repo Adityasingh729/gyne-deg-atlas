@@ -1,0 +1,17 @@
+Fetching dataset: GSE137684 (Microarray) from source: GEO_matrix
+Found 1 file(s)
+GSE137684_series_matrix.txt.gz
+Using locally cached version: data/expr/GSE137684_series_matrix.txt.gz
+Using locally cached version of GPL17077 found here:
+data/expr/GPL17077.soft.gz 
+Sample group breakdown:
+
+<NA> 
+  12 
+Successfully saved RDS to: data/expr/GSE137684.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE137684.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE137684.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6783660 362.3   11644952 622.0  8219274 439.0
+Vcells 17578184 134.2   30127254 229.9 25039379 191.1
+ 

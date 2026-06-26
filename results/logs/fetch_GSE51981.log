@@ -1,0 +1,15 @@
+Fetching dataset: GSE51981 (Microarray) from source: GEO_matrix
+Using locally cached series matrix file: data/expr/GSE51981_series_matrix.txt.gz
+Using locally cached version of GPL570 found here:
+data/expr/GPL570.soft.gz 
+Sample group breakdown:
+
+<NA> 
+ 148 
+Successfully saved RDS to: data/expr/GSE51981.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE51981.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE51981.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6668531 356.2   12083481 645.4  9058152 483.8
+Vcells 36312470 277.1   73136055 558.0 73126297 558.0
+ 

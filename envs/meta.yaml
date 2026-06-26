@@ -8,3 +8,4 @@ dependencies:
   - bioconductor-stringdb
   - r-igraph
   - r-data.table
+ 

@@ -10,3 +10,4 @@ rule enrich:
     shell:
         "Rscript workflow/scripts/enrich_hubs.R --meta {input} --out_enrich {output.enr} --out_hubs {output.hubs} > {log} 2>&1"
 
+ 

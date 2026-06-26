@@ -9,7 +9,7 @@ def get_stratum_datasets(wildcards):
         s_id = f"{cond}__{tissue}".replace(" ", "_").replace("/", "-")
         if s_id == wildcards.stratum:
             datasets_in_stratum.append(ds)
-    return [f"results/deg/{ds}.deg.symbols.tsv" for ds in datasets_in_stratum]
+    return [f"results/deg/{ds}.deg.tsv" for ds in datasets_in_stratum]
 
 rule meta:
     input: get_stratum_datasets
@@ -22,3 +22,4 @@ rule meta:
         "Rscript workflow/scripts/meta_combine.R --stratum {wildcards.stratum} --method {params.method} --min_datasets {params.minds} --deg_dir results/deg --samplesheet {config[samplesheet]} --out {output} > {log} 2>&1"
 
 
+ 

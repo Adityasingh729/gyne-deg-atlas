@@ -1,0 +1,15 @@
+Fetching dataset: GSE316028 (RNA-seq) from source: GEO_matrix
+Processing local count file: GSE316028_gene_count.csv.gz
+Using locally cached series matrix file: data/expr/GSE316028_series_matrix.txt.gz
+'select()' returned 1:many mapping between keys and columns
+Sample group breakdown:
+
+  NC siPC <NA> 
+   3    3    0 
+Successfully saved RDS to: data/expr/GSE316028.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE316028.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE316028.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  7614198 406.7   11447857 611.4 11447857 611.4
+Vcells 16786461 128.1   25842636 197.2 21468864 163.8
+ 

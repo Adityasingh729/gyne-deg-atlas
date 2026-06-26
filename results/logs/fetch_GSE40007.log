@@ -1,0 +1,20 @@
+Fetching dataset: GSE40007 (Microarray) from source: GEO_matrix
+Platform is GPL2895. Bypassing heavy submitter GPL download (getGPL=FALSE).
+Using locally cached series matrix file: data/expr/GSE40007_series_matrix.txt.gz
+Could not find gene symbol column in fData. Platform detected: GPL2895
+Attempting to map probe IDs to symbols using package: hwgcod.db
+Warning messages:
+1: In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called 'hwgcod.db'
+2: Could not map probe IDs to gene symbols. Keeping probe IDs as rownames. 
+Sample group breakdown:
+
+   TNFα vehicle    <NA> 
+      6       3       3 
+Successfully saved RDS to: data/expr/GSE40007.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE40007.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE40007.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6441988 344.1   12092075 645.8  8276839 442.1
+Vcells 12919724  98.6   21935912 167.4 18203844 138.9
+ 

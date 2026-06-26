@@ -1,0 +1,8 @@
+Fetching dataset: GSE286315 (RNA-seq) from source: GEO_matrix
+Processing local count file: GSE286315_compiled_counts.tsv.gz
+Found 1 file(s)
+GSE286315_series_matrix.txt.gz
+Using locally cached version: data/expr/GSE286315_series_matrix.txt.gz
+Error: Could not align column names of counts with GEO sample accessions.
+Execution halted
+ 

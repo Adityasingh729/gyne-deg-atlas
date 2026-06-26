@@ -1,0 +1,15 @@
+Fetching dataset: GSE262302 (RNA-seq) from source: GEO_matrix
+Processing local count file: GSE262302_raw_counts.txt.gz
+Found 1 file(s)
+GSE262302_series_matrix.txt.gz
+Using locally cached version: data/expr/GSE262302_series_matrix.txt.gz
+Failed to perform HTTP request.
+Caused by error in `curl::curl_fetch_memory()`:
+! Stream error in the HTTP/2 framing layer [www.ncbi.nlm.nih.gov]:
+HTTP/2 stream 1 was not closed cleanly: STREAM_CLOSED (err 5)File stored at:
+data/expr/GPL24676.soft.gz
+Error in downloadFile(myurl, destfile, mode = mode, quiet = TRUE) : 
+  Failed to download data/expr/GPL24676.soft.gz!
+Calls: getGEO ... parseGSEMatrix -> getGEO -> getGEOfile -> downloadFile
+Execution halted
+ 

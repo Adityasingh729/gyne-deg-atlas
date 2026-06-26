@@ -18,3 +18,4 @@ rule deg_rnaseq:
         "Rscript workflow/scripts/deg_deseq2.R --expr {input} --group \"{params.group}\" --case \"{params.case}\" --control \"{params.ctrl}\" --padj {params.padj} --lfc {params.lfc} --out {output} > {log} 2>&1"
 
 
+ 

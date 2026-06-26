@@ -1,0 +1,17 @@
+Fetching dataset: GSE75425 (Microarray) from source: GEO_matrix
+Found 1 file(s)
+GSE75425_series_matrix.txt.gz
+Using locally cached version: data/expr/GSE75425_series_matrix.txt.gz
+Using locally cached version of GPL17077 found here:
+data/expr/GPL17077.soft.gz 
+Sample group breakdown:
+
+<NA> 
+   8 
+Successfully saved RDS to: data/expr/GSE75425.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE75425.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE75425.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6778110 362.0   11644408 621.9  8220814 439.1
+Vcells 16968341 129.5   29151494 222.5 24198967 184.7
+ 

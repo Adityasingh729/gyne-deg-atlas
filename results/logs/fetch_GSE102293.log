@@ -1,0 +1,19 @@
+Fetching dataset: GSE102293 (Microarray) from source: GEO_matrix
+Using locally cached series matrix file: data/expr/GSE102293_series_matrix.txt.gz
+Using locally cached version of GPL570 found here:
+data/expr/GPL570.soft.gz 
+Sample group breakdown:
+
+                          phenotype: normal 
+                                          4 
+phenotype: PCOS (Polycystic ovary syndrome) 
+                                          2 
+                                       <NA> 
+                                          0 
+Successfully saved RDS to: data/expr/GSE102293.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE102293.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE102293.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6667586 356.1   12083481 645.4  8271568 441.8
+Vcells 18636427 142.2   37064366 282.8 37064366 282.8
+ 

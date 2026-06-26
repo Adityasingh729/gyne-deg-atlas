@@ -3,36 +3,37 @@ GSE171507,PCOS,Endometrial stromal cells,RNA-seq,72,,,,unmapped,NA
 GSE158508,PCOS,Blood,RNA-seq,69,,,,unmapped,"OFF-TOPIC: platelet cancer diagnostics, not PCOS - drop"
 GSE199225,PCOS,Skeletal muscle,RNA-seq,61,24,25,995,analyzed,NA
 GSE84958,PCOS,Adipose/adipocyte,RNA-seq,53,,,,unmapped,NA
-GSE168404,PCOS,Granulosa,RNA-seq,40,5,5,150,analyzed,NA
+GSE168404,PCOS,Granulosa cells,RNA-seq,40,,,,unmapped,NA
 GSE262471,PCOS,UNCLEAR - check,RNA-seq,30,,,,unmapped,NA
-GSE188740,PCOS,Ovary/ovarian,RNA-seq,24,13,11,0,analyzed,NA
-GSE155489,PCOS,Cumulus cells,RNA-seq,20,4,4,2139,analyzed,NA
-GSE267287,PCOS,Ovary/ovarian,RNA-seq,14,7,7,972,analyzed,NA
+GSE188740,PCOS,Ovary/ovarian,RNA-seq,24,,,,unmapped,NA
+GSE155489,PCOS,Cumulus cells,RNA-seq,20,,,,unmapped,NA
+GSE267287,PCOS,Ovary/ovarian,RNA-seq,14,,,,unmapped,NA
 GSE133941,PCOS,UNCLEAR - check,RNA-seq,13,,,,unmapped,"SUSPECT: ERa antagonist pharmacology, likely not PCOS - verify"
-GSE286315,PCOS,Stromal cells,RNA-seq,12,,,,unmapped,MISFILED: endometriosis dataset in PCOS sheet
-GSE216609,PCOS,Granulosa,RNA-seq,7,3,4,6,analyzed,NA
-GSE328499,PCOS,Granulosa,RNA-seq,6,3,3,16,analyzed,NA
-GSE294074,PCOS,Granulosa,RNA-seq,6,3,3,56,analyzed,NA
+GSE286315,PCOS,Endometrial stromal cells,RNA-seq,12,3,3,82,analyzed,MISFILED: endometriosis dataset in PCOS sheet
+GSE216609,PCOS,Granulosa cells,RNA-seq,7,,,,unmapped,NA
+GSE328499,PCOS,Granulosa cells,RNA-seq,6,,,,unmapped,NA
+GSE294074,PCOS,Granulosa cells,RNA-seq,6,,,,unmapped,NA
 GSE146856,PCOS,UNCLEAR - check,RNA-seq,6,,,,unmapped,NA
 GSE226146,PCOS,Endometrium,RNA-seq,6,,,,unmapped,NA
 GSE246995,PCOS,UNCLEAR - check,RNA-seq,6,,,,unmapped,NA
-GSE193123,PCOS,Granulosa,RNA-seq,6,3,3,113,analyzed,NA
+GSE193123,PCOS,Granulosa cells,RNA-seq,6,,,,unmapped,NA
 GSE8157,PCOS,Skeletal muscle,Microarray,43,10,13,1723,analyzed,NA
 GSE48301,PCOS,Endometrium,Microarray,29,,,,unmapped,NA
 GSE6798,PCOS,Skeletal muscle,Microarray,29,16,13,21,analyzed,NA
 GSE4888,PCOS,Endometrium,Microarray,27,,,,unmapped,GENERIC: endometrium atlas - confirm PCOS contrast exists
-GSE5090,PCOS,Adipose,Microarray,17,9,8,0,analyzed,NA
-GSE98595,PCOS,Granulosa,Microarray,16,10,6,404,analyzed,NA
-GSE80432,PCOS,Granulosa,Microarray,16,8,8,0,analyzed,NA
-GSE54250,PCOS,Whole blood,Microarray,16,4,4,1,analyzed,NA
+GSE5090,PCOS,UNCLEAR - check,Microarray,17,,,,unmapped,NA
+GSE98595,PCOS,Granulosa cells,Microarray,16,,,,unmapped,NA
+GSE80432,PCOS,Granulosa cells,Microarray,16,,,,unmapped,NA
+GSE54250,PCOS,Whole blood,Microarray,16,,,,unmapped,NA
 GSE106724,PCOS,Granulosa,Microarray,12,4,4,1088,analyzed,NA
 GSE137684,PCOS,Granulosa,Microarray,12,4,4,0,analyzed,NA
 GSE34526,PCOS,Granulosa,Microarray,10,7,3,0,analyzed,NA
-GSE149033,PCOS,Cumulus cells,Microarray,8,,,,raw data fetched,NA
+GSE149033,PCOS,Cumulus cells,Microarray,8,,,,unmapped,NA
 GSE124226,PCOS,Adipose/adipocyte,Microarray,8,,,,unmapped,NA
-GSE40400,PCOS,Cumulus cells,Microarray,6,,,,raw data fetched,NA
+GSE40400,PCOS,Cumulus cells,Microarray,6,,,,unmapped,NA
 GSE97772,PCOS,KGN cell line,Microarray,6,,,,unmapped,"CELL LINE: KGN knockdown, not patient PCOS tissue"
 GSE102293,PCOS,Granulosa,Microarray,6,2,4,0,analyzed,NA
 GSE137354,PCOS,Endometrium,Microarray,6,,,,unmapped,NA
 GSE114419,PCOS,Granulosa,Microarray,6,3,3,0,analyzed,NA
 GSE44311,PCOS,UNCLEAR - check,Microarray,6,,,,unmapped,NA
+ 

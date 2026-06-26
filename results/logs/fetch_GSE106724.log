@@ -1,0 +1,20 @@
+Fetching dataset: GSE106724 (Microarray) from source: GEO_matrix
+Using locally cached series matrix file: data/expr/GSE106724_series_matrix.txt.gz
+Using locally cached version of GPL21096 found here:
+data/expr/GPL21096.soft.gz 
+Could not find gene symbol column in fData. Platform detected: GPL21096
+Warning message:
+Could not map probe IDs to gene symbols. Keeping probe IDs as rownames. 
+Sample group breakdown:
+
+            normal control PCOS with hyperandrogenism 
+                         4                          4 
+                      <NA> 
+                         4 
+Successfully saved RDS to: data/expr/GSE106724.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE106724.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE106724.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  7028452 375.4   12092075 645.8  8276552 442.1
+Vcells 21364290 163.0   36662400 279.8 36653801 279.7
+ 

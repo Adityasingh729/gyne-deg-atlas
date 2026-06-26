@@ -1,0 +1,7 @@
+Running enrichment and hub analysis for file: results/meta/Adenomyosis__Myometrium.meta.tsv
+Warning messages:
+1: In fwrite(data.table(), out_enrich, sep = "\t") :
+  Input has no columns; creating an empty file at 'results/enrich/Adenomyosis__Myometrium.enrich.tsv' and exiting.
+2: In fwrite(data.table(), out_hubs, sep = "\t") :
+  Input has no columns; creating an empty file at 'results/enrich/Adenomyosis__Myometrium.hubs.tsv' and exiting.
+ 

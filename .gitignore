@@ -1,0 +1,25 @@
+# Snakemake cache
+.snakemake/
+
+# Raw and cached expression/annotation data
+data/
+
+# R history
+.Rhistory
+
+# Raw expression data and clinical files (large/binary)
+GSE*_clinical_data.xlsx
+GSE*_counts.tsv.gz
+GSE*_logCPM_filtered_batchCorrected.tsv.gz
+GSE*_gene_fkpm_and_count_value_matrix.txt.gz
+GSE*_raw_counts.txt.gz
+GSE*_compiled_counts.tsv.gz
+GSE*_gene_count.csv.gz
+{log}
+
+# Speed test files
+test_*.gz
+
+# Temporary GEO metadata text files
+geo_*.txt
+ 

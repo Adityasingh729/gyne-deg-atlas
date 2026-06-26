@@ -41,3 +41,4 @@ results/     outputs (gitignored)
 - Use 1-2 cores; counts matrices are small, but R can spike. Call `gc()` often.
 - For WGCNA, filter to the top ~5000 variable genes (see `scripts/wgcna.R` TODO).
 - Do NOT download FASTQ on these machines. Alignment (if ever needed) runs only on the 64 GB workstation.
+ 

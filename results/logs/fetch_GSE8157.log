@@ -1,0 +1,15 @@
+Fetching dataset: GSE8157 (Microarray) from source: GEO_matrix
+Using locally cached series matrix file: data/expr/GSE8157_series_matrix.txt.gz
+Using locally cached version of GPL570 found here:
+data/expr/GPL570.soft.gz 
+Sample group breakdown:
+
+Control    PCOS    <NA> 
+     13      10      20 
+Successfully saved RDS to: data/expr/GSE8157.expr.rds
+Successfully saved sidecar counts to: data/expr/GSE8157.counts.tsv
+Successfully saved sidecar meta to: data/expr/GSE8157.meta.tsv
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells  6653553 355.4   12092072 645.8  8276546 442.1
+Vcells 23301335 177.8   42132970 321.5 42132969 321.5
+ 
